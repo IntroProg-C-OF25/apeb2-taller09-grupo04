@@ -30,3 +30,8 @@ public class Ejercicio4 {
         }
     }
 }
+/*
+run:
+Hasta d�nde se imprimir� la serie Fibonacci? 9
+1/2, 1/3, 2/5, 3/7, 5/11, 8/13, 13/17, 21/19, 34/23
+*/
