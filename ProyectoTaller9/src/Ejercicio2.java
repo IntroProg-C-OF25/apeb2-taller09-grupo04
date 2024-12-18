@@ -1,32 +1,28 @@
+/***
+ * Figura 2:
+ */
 import java.util.Scanner;
-
 public class Ejercicio2 {
-
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int lim, a = 1, b = 1, aux, prim = 2;
-        System.out.print("Hasta dónde se imprimirá la serie Fibonacci? ");
-        lim = in.nextInt();
-        for (int i = 0; i < lim; i++) {
-            System.out.print(a + "/" + prim);
-            aux = a + b;
-            a = b;
-            b = aux;
-            prim++;
-            while (true) {
-                boolean primV = true;
-                for (int j = 2; j <= Math.sqrt(prim); j++) {
-                    if (prim % j == 0) {
-                        primV = false;
-                        break;
-                    }
-                }
-                if (primV) break;
-                prim++;
+        int n;
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Dame el limite del arbol navideño: ");
+        n = teclado.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= (n - i); j++) {
+                System.out.print(" ");
             }
-            if (i < lim - 1) {
-                System.out.print(", ");
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
             }
+            System.out.println();
         }
     }
 }
+/***
+ * Dame el limite del arbol navide�o: 4
+   *
+  ***
+ *****
+*******
+ */
